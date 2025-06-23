@@ -3,7 +3,7 @@ import { Book } from "../models/book.model";
 
 export const booksRouter = express.Router()
 
-booksRouter.post('/books', async(req: Request, res: Response)=> {
+booksRouter.post('/', async(req: Request, res: Response)=> {
     try {
         const body = req.body;
         const book = await Book.create(body)
